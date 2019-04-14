@@ -24,12 +24,9 @@ class WebsocketPPConan(ConanFile):
         self.requires.add('OpenSSL/1.0.2o@conan/stable')
         self.requires.add('zlib/1.2.11@conan/stable')
         if self.options.asio == 'standalone':
-            self.requires.add('asio/1.12.0@bincrafters/stable')
+            self.requires.add('asio/1.13.0@zinnion/stable')
         else:
-            self.requires.add('boost_random/1.66.0@bincrafters/stable')
-            self.requires.add('boost_system/1.66.0@bincrafters/stable')
-            self.requires.add('boost_thread/1.66.0@bincrafters/stable')
-            self.requires.add('boost_asio/1.66.0@bincrafters/stable')
+            self.requires.add('boost/1.69.0@zinnion/stable')
 
     def source(self):
         archive_name = "{0}-{1}".format(self.name, self.version)
