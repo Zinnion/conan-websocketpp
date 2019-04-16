@@ -21,8 +21,8 @@ class WebsocketPPConan(ConanFile):
     default_options = "asio=boost"
 
     def requirements(self):
-        self.requires.add('OpenSSL/1.1.1a@conan/stable')
-        self.requires.add('zlib/1.2.11@conan/stable')
+        self.requires.add('OpenSSL/1.1.1b@zinnion/stable')
+        self.requires.add('zlib/1.2.11@zinnion/stable')
         if self.options.asio == 'standalone':
             self.requires.add('asio/1.13.0@zinnion/stable')
         else:
